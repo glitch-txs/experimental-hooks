@@ -1,4 +1,4 @@
-import { useStore } from "../useStore/useStore"
+import { useStore } from "../useStore"
 
 export const useWindowSize = () => {
 
@@ -11,13 +11,14 @@ export const useWindowSize = () => {
   }
 
   const windowSize = useStore((set)=>{
-
     function handleResize() {
       set({
         height: window.innerHeight,
         width: window.innerWidth,
       })
     }
+    
+    handleResize();
     window.addEventListener('resize', handleResize);
   
     return () => window.removeEventListener('resize', handleResize);
