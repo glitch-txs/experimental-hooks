@@ -1,0 +1,1 @@
+useStore is an abstraction of useSyncExternalStore to simplify its use and make it similar to useEffect
