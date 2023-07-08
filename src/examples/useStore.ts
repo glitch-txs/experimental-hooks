@@ -1,7 +1,6 @@
 import { useStore } from "../useStore"
 
 export const useWindowSize = () => {
-
   const initialSize: {
     height: number | undefined
     width: number | undefined
