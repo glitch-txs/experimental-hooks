@@ -1,4 +1,4 @@
-import { useStore } from "../useStore"
+import { useExternal } from "../useExternal"
 
 export const useWindowSize = () => {
   const initialSize: {
@@ -9,7 +9,7 @@ export const useWindowSize = () => {
     width: undefined
   }
 
-  const windowSize = useStore((set)=>{
+  const windowSize = useExternal((set)=>{
     function handleResize() {
       set({
         height: window.innerHeight,
